@@ -13,7 +13,7 @@ print(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
 Time Complexity: O(n)
 Space Complexity: O(1)
 
- nums =  doesn't replace elements in the original list.
+nums =  doesn't replace elements in the original list.
 nums[:] = replaces element in place
 
 In short, without [:], we're creating a new list object, which is against what this problem is asking for:

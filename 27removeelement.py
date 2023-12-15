@@ -14,3 +14,10 @@ def removeElement(nums: List[int], val: int) -> int:
 
 
 print(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2))
+
+
+# the time complexity is O(n) and space complexity is O(1)
+# is there any wayt to imrpove the time complexity?
+# we can use two pointers
+# one pointer to iterate the array and another pointer to place the elements
+# the time complexity is O(n) and space complexity is O(1)
