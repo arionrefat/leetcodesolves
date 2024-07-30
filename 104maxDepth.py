@@ -9,6 +9,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     # this is recursive solution
     # the time complexity is O(n) where n is the number of nodes in the tree
@@ -18,21 +19,22 @@ class Solution:
 
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
+
 # this is the recursive BFS solution
-def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if root is None:
-            return 0
-        
-        q = deque([root])
-        level = 0
+def maxDepth(root: Optional[TreeNode]) -> int:
+    if root is None:
+        return 0
 
-        while q:
-            for i in range(len(q)):
-                node = q.popleft()
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            level += 1
+    q = deque([root])
+    level = 0
 
-        return level
+    while q:
+        for _ in range(len(q)):
+            node = q.popleft()
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        level += 1
+
+    return level
